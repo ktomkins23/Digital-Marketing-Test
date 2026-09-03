@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Me - Kaden</title>
 
     <style>
@@ -13,6 +15,64 @@
             color: #333;
         }
 
+        /* Navigation Bar */
+        .main-nav {
+            width: 100%;
+            background-color: #162d63;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-left {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-left a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .nav-left a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 8px;
+        }
+
+        #searchBar {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            width: 180px;
+        }
+
+        #searchButton {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: #162d63;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #searchButton:hover {
+            background-color: #ddd;
+        }
+
+        /* Header */
         header {
             background-color: #1f3c88;
             color: white;
@@ -29,23 +89,7 @@
             font-size: 18px;
         }
 
-        nav {
-            background-color: #162d63;
-            text-align: center;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
+        /* Sections */
         section {
             max-width: 900px;
             margin: 40px auto;
@@ -103,14 +147,20 @@
             margin-top: 50px;
         }
 
+        /* Mobile */
         @media (max-width: 600px) {
+            .main-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-left {
+                gap: 15px;
+            }
+
             .about-container {
                 flex-direction: column;
                 text-align: center;
-            }
-
-            nav a {
-                margin: 0 8px;
             }
         }
     </style>
@@ -122,13 +172,6 @@
         <h1>Hi, I'm Kaden!</h1>
         <p>Business Marketing Student | Iowa State University</p>
     </header>
-
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#interests">Interests</a>
-        <a href="#goals">Goals</a>
-        <a href="#contact">Contact</a>
-    </nav>
 
     <section id="about">
         <h2>About Me</h2>
@@ -156,7 +199,6 @@
         </div>
     </section>
 
-
     <section id="interests">
         <h2>My Interests</h2>
 
@@ -166,15 +208,13 @@
                 <h3>🎸 Music</h3>
                 <p>
                     I enjoy listening to music, playing guitar, and collecting CDs.
-                    Guitar is what originally got me more interested in music.
                 </p>
             </div>
 
             <div class="card">
                 <h3>🌲 Outdoors</h3>
                 <p>
-                    I enjoy spending time outdoors and being active outside whenever
-                    I get the chance.
+                    I enjoy spending time outdoors and being active outside.
                 </p>
             </div>
 
@@ -182,21 +222,20 @@
                 <h3>📈 Business</h3>
                 <p>
                     I'm interested in marketing, business, and learning how
-                    companies build relationships with their customers.
+                    companies connect with their customers.
                 </p>
             </div>
 
         </div>
     </section>
 
-
     <section id="goals">
         <h2>My Goals</h2>
 
         <p>
-            One of my main goals is to graduate from Iowa State University with
-            a degree in Business Marketing and build a career where I can use
-            creativity, communication, and problem-solving skills.
+            One of my main goals is to graduate from Iowa State University
+            with a degree in Business Marketing and build a career where I
+            can use creativity, communication, and problem-solving skills.
         </p>
 
         <p>
@@ -204,7 +243,6 @@
             experience that will help me succeed after college.
         </p>
     </section>
-
 
     <section id="contact">
         <h2>Contact Me</h2>
@@ -216,13 +254,14 @@
         <p>
             <strong>Email:</strong> your-email@example.com
         </p>
-
     </section>
-
 
     <footer>
         <p>© 2026 Kaden | Personal Website</p>
     </footer>
+
+    <!-- JavaScript Navigation -->
+    <script src="script.js"></script>
 
 </body>
 </html>
