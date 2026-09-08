@@ -1,6 +1,6 @@
-/* ================================
-   GENERAL PAGE STYLING
-================================ */
+/* =================================
+   BASIC RESET
+================================= */
 
 * {
     box-sizing: border-box;
@@ -8,45 +8,40 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background: #071a33;
+
     color: #f5f7fa;
+
     min-height: 100vh;
 }
 
 
-/* ================================
-   MAIN WEBSITE CONTAINER
-================================ */
+/* =================================
+   MAIN WEBSITE
+================================= */
 
 .site-container {
+
     width: 80%;
+
     margin: 0 auto;
+
     min-height: 100vh;
 
     display: grid;
 
-    /*
-        3 rows:
-        Header
-        Main content
-        Footer
-    */
+    grid-template-columns: 22% 78%;
 
     grid-template-rows: 80px 1fr 60px;
-
-    /*
-        2 columns:
-        Navigation = 22%
-        Content = 78%
-    */
-
-    grid-template-columns: 22% 78%;
 
     grid-template-areas:
         "header header"
@@ -56,6 +51,7 @@ body {
     background: #102a4c;
 
     border-left: 2px solid #3b82f6;
+
     border-right: 2px solid #3b82f6;
 
     box-shadow:
@@ -63,33 +59,40 @@ body {
 }
 
 
-/* ================================
+/* =================================
    HEADER
-================================ */
+================================= */
 
 header {
+
     grid-area: header;
 
     background: #142f52;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-bottom: 2px solid #3b82f6;
 }
 
+
 header h1 {
+
     font-size: 28px;
+
     letter-spacing: 1px;
 }
 
 
-/* ================================
+/* =================================
    NAVIGATION
-================================ */
+================================= */
 
 nav {
+
     grid-area: nav;
 
     background: #0c2340;
@@ -100,28 +103,41 @@ nav {
 }
 
 
-/* Navigation links created by JavaScript */
+/* Navigation container */
 
 #main-navigation {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 10px;
+
+    width: 100%;
 }
 
 
 /* Navigation links */
 
 #main-navigation a {
+
     display: block;
 
+    width: 100%;
+
     color: #dbeafe;
+
     text-decoration: none;
 
-    padding: 13px 15px;
+    padding: 14px 16px;
 
     border-radius: 8px;
 
-    font-size: 16px;
+    font-size: 17px;
+
+    font-weight: 500;
+
+    background: transparent;
 
     transition:
         background 0.2s ease,
@@ -130,62 +146,83 @@ nav {
 }
 
 
-/* Hover effect */
+/* Hover */
 
 #main-navigation a:hover {
+
     background: #1d4ed8;
+
     color: white;
 
     transform: translateX(4px);
 }
 
 
-/* Active page */
+/* Current page */
 
 #main-navigation a.active {
+
     background: #2563eb;
+
     color: white;
 
     font-weight: bold;
 }
 
 
-/* ================================
+/* =================================
    SEARCH BAR
-================================ */
+================================= */
 
 .nav-search {
-    margin-top: 25px;
-}
 
-.nav-search input {
     width: 100%;
 
-    padding: 11px 12px;
+    margin-top: 20px;
+}
+
+
+.nav-search input {
+
+    width: 100%;
+
+    padding: 12px;
 
     border: 1px solid #315a87;
+
     border-radius: 7px;
 
     background: #071a33;
+
     color: white;
+
+    font-size: 15px;
 
     outline: none;
 }
 
+
 .nav-search input::placeholder {
+
     color: #9fb3c8;
 }
 
+
 .nav-search input:focus {
+
     border-color: #60a5fa;
+
+    box-shadow:
+        0 0 5px rgba(96, 165, 250, 0.5);
 }
 
 
-/* ================================
+/* =================================
    MAIN CONTENT
-================================ */
+================================= */
 
 main {
+
     grid-area: content;
 
     background: #f1f5f9;
@@ -198,34 +235,11 @@ main {
 }
 
 
-/* Content headings */
-
-main h2 {
-    margin-bottom: 15px;
-
-    font-size: 28px;
-
-    color: #142f52;
-}
-
-
-/* Paragraphs */
-
-main p {
-    line-height: 1.7;
-
-    margin-bottom: 15px;
-}
-
-
-/* ================================
-   CONTENT BOX
-================================ */
-
 .content-box {
+
     background: white;
 
-    padding: 25px;
+    padding: 30px;
 
     border-radius: 10px;
 
@@ -236,17 +250,38 @@ main p {
 }
 
 
-/* ================================
+main h2 {
+
+    margin-bottom: 15px;
+
+    font-size: 28px;
+
+    color: #142f52;
+}
+
+
+main p {
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+/* =================================
    FOOTER
-================================ */
+================================= */
 
 footer {
+
     grid-area: footer;
 
     background: #0c2340;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-top: 2px solid #3b82f6;
@@ -257,13 +292,14 @@ footer {
 }
 
 
-/* ================================
-   MOBILE RESPONSIVE DESIGN
-================================ */
+/* =================================
+   MOBILE
+================================= */
 
 @media (max-width: 768px) {
 
     .site-container {
+
         width: 100%;
 
         grid-template-columns: 1fr;
@@ -283,28 +319,44 @@ footer {
         border: none;
     }
 
+
     nav {
+
         border-right: none;
+
         border-bottom: 2px solid #3b82f6;
 
         padding: 15px;
     }
 
+
     #main-navigation {
+
         flex-direction: row;
+
         flex-wrap: wrap;
     }
 
+
     #main-navigation a {
+
         flex: 1;
+
         text-align: center;
+
+        min-width: 100px;
     }
 
+
     .nav-search {
+
         margin-top: 15px;
     }
 
+
     main {
+
         padding: 20px;
     }
+
 }
