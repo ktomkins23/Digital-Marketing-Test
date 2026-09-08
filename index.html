@@ -1,267 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Me - Kaden</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    <title>Home - My Website</title>
 
-        /* Navigation Bar */
-        .main-nav {
-            width: 100%;
-            background-color: #162d63;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 25px;
-            box-sizing: border-box;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .nav-left {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .nav-left a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .nav-left a:hover {
-            text-decoration: underline;
-        }
-
-        .nav-right {
-            display: flex;
-            gap: 8px;
-        }
-
-        #searchBar {
-            padding: 8px 12px;
-            border: none;
-            border-radius: 5px;
-            width: 180px;
-        }
-
-        #searchButton {
-            padding: 8px 14px;
-            border: none;
-            border-radius: 5px;
-            background-color: white;
-            color: #162d63;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        #searchButton:hover {
-            background-color: #ddd;
-        }
-
-        /* Header */
-        header {
-            background-color: #1f3c88;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 18px;
-        }
-
-        /* Sections */
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        section h2 {
-            color: #1f3c88;
-        }
-
-        .about-container {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .profile-picture {
-            width: 180px;
-            height: 180px;
-            background-color: #ddd;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #777;
-            text-align: center;
-        }
-
-        .cards {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            flex: 1;
-            min-width: 200px;
-            background-color: #eef2ff;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .card h3 {
-            color: #1f3c88;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #162d63;
-            color: white;
-            padding: 25px;
-            margin-top: 50px;
-        }
-
-        /* Mobile */
-        @media (max-width: 600px) {
-            .main-nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-left {
-                gap: 15px;
-            }
-
-            .about-container {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Hi, I'm Kaden!</h1>
-        <p>Business Marketing Student | Iowa State University</p>
-    </header>
+    <div class="site-container">
 
-    <section id="about">
-        <h2>About Me</h2>
+        <!-- HEADER -->
 
-        <div class="about-container">
+        <header>
 
-            <div class="profile-picture">
-                Add Photo Here
-            </div>
+            <h1>My Website</h1>
 
-            <div>
+        </header>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+            <div id="main-navigation"></div>
+
+        </nav>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main>
+
+            <div class="content-box">
+
+                <h2>Welcome</h2>
+
                 <p>
-                    My name is Kaden, and I am a student at Iowa State University
-                    studying Business Marketing. I enjoy learning about business,
-                    marketing, and how companies connect with their customers.
+                    Welcome to my website! This is my personal
+                    website where you can learn more about me.
                 </p>
 
-                <p>
-                    Outside of school, I enjoy spending time outdoors, listening to
-                    music, playing guitar, and collecting CDs. Picking up guitar
-                    helped me appreciate music in a completely different way.
-                </p>
             </div>
 
-        </div>
-    </section>
+        </main>
 
-    <section id="interests">
-        <h2>My Interests</h2>
 
-        <div class="cards">
+        <!-- FOOTER -->
 
-            <div class="card">
-                <h3>🎸 Music</h3>
-                <p>
-                    I enjoy listening to music, playing guitar, and collecting CDs.
-                </p>
-            </div>
+        <footer>
 
-            <div class="card">
-                <h3>🌲 Outdoors</h3>
-                <p>
-                    I enjoy spending time outdoors and being active outside.
-                </p>
-            </div>
+            <p>
+                © 2026 My Website
+            </p>
 
-            <div class="card">
-                <h3>📈 Business</h3>
-                <p>
-                    I'm interested in marketing, business, and learning how
-                    companies connect with their customers.
-                </p>
-            </div>
+        </footer>
 
-        </div>
-    </section>
+    </div>
 
-    <section id="goals">
-        <h2>My Goals</h2>
 
-        <p>
-            One of my main goals is to graduate from Iowa State University
-            with a degree in Business Marketing and build a career where I
-            can use creativity, communication, and problem-solving skills.
-        </p>
+    <!-- JAVASCRIPT -->
 
-        <p>
-            I also want to continue developing my professional skills and gain
-            experience that will help me succeed after college.
-        </p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>
-            Interested in getting in touch? Feel free to connect with me!
-        </p>
-
-        <p>
-            <strong>Email:</strong> your-email@example.com
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2026 Kaden | Personal Website</p>
-    </footer>
-
-    <!-- JavaScript Navigation -->
-    <script src="script.js"></script>
+    <script src="navigation.js"></script>
 
 </body>
+
 </html>
