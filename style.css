@@ -1,6 +1,6 @@
-/* =================================
+/* ============================================
    BASIC RESET
-================================= */
+============================================ */
 
 * {
     box-sizing: border-box;
@@ -8,25 +8,29 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background: #071a33;
+
     color: #f5f7fa;
+
     min-height: 100vh;
 }
 
 
-/* =================================
-   MAIN WEBSITE
-================================= */
+/* ============================================
+   WEBSITE CONTAINER
+============================================ */
 
 .site-container {
 
-    /* 10% space on each side */
     width: 80%;
 
     margin: 0 auto;
@@ -50,6 +54,7 @@ body {
     background: #102a4c;
 
     border-left: 2px solid #3b82f6;
+
     border-right: 2px solid #3b82f6;
 
     box-shadow:
@@ -57,9 +62,9 @@ body {
 }
 
 
-/* =================================
+/* ============================================
    HEADER
-================================= */
+============================================ */
 
 header {
 
@@ -70,12 +75,8 @@ header {
     text-align: center;
 
     border-bottom: 2px solid #3b82f6;
-
-    padding-top: 25px;
 }
 
-
-/* Website title */
 
 header h1 {
 
@@ -83,25 +84,37 @@ header h1 {
 
     letter-spacing: 1px;
 
-    margin-bottom: 20px;
+    padding: 25px 20px;
 }
 
 
-/* =================================
+/* ============================================
    HORIZONTAL NAVIGATION
-================================= */
+============================================ */
 
-nav {
+#main-navigation {
 
     width: 100%;
 
     background: #0c2340;
 
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
     padding: 10px 20px;
 }
 
 
-#main-navigation {
+/* Navigation links container */
+
+.nav-links {
 
     display: flex;
 
@@ -110,14 +123,12 @@ nav {
     justify-content: center;
 
     gap: 10px;
-
-    width: 100%;
 }
 
 
-/* Navigation links */
+/* Individual links */
 
-#main-navigation a {
+.nav-links a {
 
     display: inline-block;
 
@@ -142,7 +153,7 @@ nav {
 
 /* Hover */
 
-#main-navigation a:hover {
+.nav-links a:hover {
 
     background: #1d4ed8;
 
@@ -154,7 +165,7 @@ nav {
 
 /* Current page */
 
-#main-navigation a.active {
+.nav-links a.active {
 
     background: #2563eb;
 
@@ -164,21 +175,25 @@ nav {
 }
 
 
-/* =================================
+/* ============================================
    SEARCH BAR
-================================= */
+============================================ */
 
 .nav-search {
 
-    margin-left: 10px;
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
 }
 
 
 .nav-search input {
 
-    width: 180px;
+    width: 210px;
 
-    padding: 11px 13px;
+    padding: 12px 14px;
 
     border: 1px solid #315a87;
 
@@ -209,25 +224,27 @@ nav {
 }
 
 
-/* =================================
+/* ============================================
    SEARCH RESULTS
-================================= */
+============================================ */
 
 .search-results {
 
     position: absolute;
 
+    top: calc(100% + 8px);
+
+    right: 0;
+
     background: white;
 
     color: #172033;
 
-    width: 300px;
+    width: 280px;
 
     max-height: 300px;
 
     overflow-y: auto;
-
-    margin-top: 8px;
 
     border-radius: 8px;
 
@@ -244,7 +261,7 @@ nav {
 
     display: block;
 
-    padding: 12px 15px;
+    padding: 13px 15px;
 
     color: #172033;
 
@@ -254,9 +271,31 @@ nav {
 }
 
 
+.search-result strong {
+
+    display: block;
+
+    color: #142f52;
+
+    margin-bottom: 3px;
+}
+
+
+.search-result span {
+
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
 .search-result:hover {
 
     background: #eff6ff;
+}
+
+
+.search-result:hover strong {
 
     color: #1d4ed8;
 }
@@ -264,15 +303,15 @@ nav {
 
 .no-results {
 
-    padding: 12px 15px;
+    padding: 15px;
 
     color: #555;
 }
 
 
-/* =================================
+/* ============================================
    MAIN CONTENT
-================================= */
+============================================ */
 
 main {
 
@@ -323,6 +362,16 @@ main h3 {
 }
 
 
+main h4 {
+
+    margin-top: 20px;
+
+    margin-bottom: 8px;
+
+    color: #142f52;
+}
+
+
 main p {
 
     line-height: 1.7;
@@ -331,15 +380,16 @@ main p {
 }
 
 
-/* =================================
-   ABOUT ME CARDS
-================================= */
+/* ============================================
+   INFORMATION CARDS
+============================================ */
 
 .info-section {
 
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2, 1fr);
 
     gap: 20px;
 
@@ -356,6 +406,8 @@ main p {
     border-radius: 10px;
 
     border-left: 4px solid #3b82f6;
+
+    margin-bottom: 20px;
 }
 
 
@@ -367,9 +419,48 @@ main p {
 }
 
 
-/* =================================
+/* ============================================
+   PROJECT CARDS
+============================================ */
+
+.project-card {
+
+    background: #f8fafc;
+
+    padding: 25px;
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+
+    border-left: 5px solid #2563eb;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+
+.project-card h3 {
+
+    margin-top: 0;
+
+    font-size: 23px;
+
+    color: #142f52;
+}
+
+
+.project-card h4 {
+
+    color: #1d4ed8;
+
+    margin-top: 20px;
+}
+
+
+/* ============================================
    FOOTER
-================================= */
+============================================ */
 
 footer {
 
@@ -391,9 +482,9 @@ footer {
 }
 
 
-/* =================================
+/* ============================================
    MOBILE
-================================= */
+============================================ */
 
 @media (max-width: 768px) {
 
@@ -407,13 +498,23 @@ footer {
 
     #main-navigation {
 
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 15px;
+    }
+
+
+    .nav-links {
+
         flex-wrap: wrap;
 
         gap: 5px;
     }
 
 
-    #main-navigation a {
+    .nav-links a {
 
         padding: 10px 12px;
 
@@ -423,11 +524,7 @@ footer {
 
     .nav-search {
 
-        margin-left: 0;
-
         width: 100%;
-
-        margin-top: 5px;
     }
 
 
@@ -439,11 +536,19 @@ footer {
 
     .search-results {
 
-        width: 90%;
+        width: 100%;
+
+        right: 0;
     }
 
 
     main {
+
+        padding: 20px;
+    }
+
+
+    .content-box {
 
         padding: 20px;
     }
