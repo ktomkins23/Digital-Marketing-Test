@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartSip - Products</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ============================================
+           SMARTSIP PRODUCT PAGE
+        ============================================ */
+
+        .product-page {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+        /* ============================================
+           SMARTSIP LOGO
+        ============================================ */
+
+        .smartsip-logo {
+            text-align: center;
+            padding: 25px 0 10px;
+        }
+
+        .logo-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 55px;
+            height: 55px;
+
+            background: #2563eb;
+
+            border-radius: 50%;
+
+            color: white;
+
+            font-size: 30px;
+
+            margin-right: 10px;
+
+            vertical-align: middle;
+        }
+
+        .logo-text {
+            display: inline-block;
+
+            font-size: 42px;
+
+            font-weight: bold;
+
+            color: #142f52;
+
+            vertical-align: middle;
+        }
+
+        .logo-tagline {
+            margin-top: 5px;
+
+            color: #64748b;
+
+            font-size: 16px;
+        }
+
+
+        /* ============================================
+           PRODUCT HERO
+        ============================================ */
+
+        .product-hero {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+            margin-top: 25px;
+        }
+
+
+        /* Product bottle */
+
+        .product-image {
+
+            background: #eaf2fb;
+
+            border-radius: 15px;
+
+            min-height: 450px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+        }
+
+
+        .bottle {
+
+            width: 190px;
+
+            height: 350px;
+
+            background: linear-gradient(
+                to right,
+                #071a33,
+                #173d68,
+                #071a33
+            );
+
+            border-radius: 45px 45px 35px 35px;
+
+            position: relative;
+
+            box-shadow:
+                10px 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* Bottle cap */
+
+        .bottle-cap {
+
+            position: absolute;
+
+            width: 145px;
+
+            height: 65px;
+
+            background: #0c2340;
+
+            top: -40px;
+
+            left: 22px;
+
+            border-radius: 25px 25px 15px 15px;
+        }
+
+
+        .bottle-handle {
+
+            position: absolute;
+
+            width: 55px;
+
+            height: 45px;
+
+            border: 10px solid #0c2340;
+
+            border-bottom: none;
+
+            border-radius: 30px 30px 0 0;
+
+            top: -48px;
+
+            right: -15px;
+        }
+
+
+        /* Logo on bottle */
+
+        .bottle-logo {
+
+            position: absolute;
+
+            top: 125px;
+
+            width: 100%;
+
+            text-align: center;
+
+            color: white;
+        }
+
+
+        .bottle-logo .drop {
+
+            font-size: 40px;
+
+            color: #3b82f6;
+
+            display: block;
+        }
+
+
+        .bottle-logo .brand {
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+
+        /* ============================================
+           HERO TEXT
+        ============================================ */
+
+        .product-label {
+
+            color: #2563eb;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .product-info h2 {
+
+            font-size: 48px;
+
+            line-height: 1.1;
+
+            color: #142f52;
+
+            margin-bottom: 20px;
+        }
+
+
+        .product-description {
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #475569;
+
+            margin-bottom: 25px;
+        }
+
+
+        .product-price {
+
+            font-size: 38px;
+
+            font-weight: bold;
+
+            color: #2563eb;
+
+            margin-bottom: 20px;
+        }
+
+
+        .buy-button {
+
+            display: inline-block;
+
+            background: #2563eb;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px 30px;
+
+            border-radius: 8px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            transition: 0.2s ease;
+        }
+
+
+        .buy-button:hover {
+
+            background: #1d4ed8;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ============================================
+           FEATURES
+        ============================================ */
+
+        .product-features {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+
+        .feature {
+
+            background: white;
+
+            padding: 25px 15px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+
+        .feature-icon {
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .feature h3 {
+
+            color: #142f52;
+
+            margin: 0 0 8px;
+
+            font-size: 18px;
+        }
+
+
+        .feature p {
+
+            color: #64748b;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            margin: 0;
+        }
+
+
+        /* ============================================
+           PRODUCT DETAILS
+        ============================================ */
+
+        .product-details {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+            margin-top: 35px;
+        }
+
+
+        .details-card {
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+
+        .details-card h2 {
+
+            color: #142f52;
+
+            margin-bottom: 15px;
+
+            font-size: 28px;
+        }
+
+
+        .details-card p {
+
+            color: #475569;
+
+            line-height: 1.7;
+        }
+
+
+        .details-list {
+
+            list-style: none;
+
+            margin-top: 15px;
+        }
+
+
+        .details-list li {
+
+            padding: 10px 0;
+
+            border-bottom: 1px solid #e2e8f0;
+
+            color: #475569;
+        }
+
+
+        .details-list li::before {
+
+            content: "✓";
+
+            color: #2563eb;
+
+            font-weight: bold;
+
+            margin-right: 10px;
+        }
+
+
+        /* ============================================
+           SPECIFICATIONS
+        ============================================ */
+
+        .spec-table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 10px;
+        }
+
+
+        .spec-table td {
+
+            padding: 12px 5px;
+
+            border-bottom: 1px solid #e2e8f0;
+
+            color: #475569;
+        }
+
+
+        .spec-table td:first-child {
+
+            font-weight: bold;
+
+            color: #142f52;
+        }
+
+
+        /* ============================================
+           CALL TO ACTION
+        ============================================ */
+
+        .product-cta {
+
+            text-align: center;
+
+            background: #142f52;
+
+            color: white;
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            margin-top: 35px;
+        }
+
+
+        .product-cta h2 {
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .product-cta p {
+
+            color: #dbeafe;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ============================================
+           MOBILE
+        ============================================ */
+
+        @media (max-width: 768px) {
+
+            .product-hero {
+
+                grid-template-columns: 1fr;
+
+                padding: 25px;
+            }
+
+
+            .product-info h2 {
+
+                font-size: 36px;
+            }
+
+
+            .product-features {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .product-details {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .logo-text {
+
+                font-size: 32px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .product-features {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="site-container">
+
+        <!-- =========================================
+             HEADER
+        ========================================== -->
+
+        <header>
+
+            <h1>Kaden's Website</h1>
+
+            <nav id="main-navigation"></nav>
+
+        </header>
+
+
+        <!-- =========================================
+             MAIN CONTENT
+        ========================================== -->
+
+        <main>
+
+            <div class="product-page">
+
+
+                <!-- SMARTSIP LOGO -->
+
+                <div class="smartsip-logo">
+
+                    <div>
+
+                        <span class="logo-icon">💧</span>
+
+                        <span class="logo-text">
+                            SmartSip
+                        </span>
+
+                    </div>
+
+                    <div class="logo-tagline">
+                        Smarter Hydration. A Healthier You.
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     PRODUCT HERO
+                ================================== -->
+
+                <section class="product-hero">
+
+
+                    <!-- Bottle -->
+
+                    <div class="product-image">
+
+                        <div class="bottle">
+
+                            <div class="bottle-cap"></div>
+
+                            <div class="bottle-handle"></div>
+
+                            <div class="bottle-logo">
+
+                                <span class="drop">
+                                    💧
+                                </span>
+
+                                <span class="brand">
+                                    SmartSip
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Product information -->
+
+                    <div class="product-info">
+
+                        <div class="product-label">
+                            The SmartSip
+                        </div>
+
+                        <h2>
+                            Hydration Made Smarter
+                        </h2>
+
+                        <p class="product-description">
+
+                            SmartSip is a smart stainless steel
+                            water bottle designed to help you stay
+                            hydrated throughout your day.
+
+                            With built-in tracking technology and
+                            a connected mobile app, SmartSip makes
+                            it easier to keep track of how much
+                            water you drink.
+
+                        </p>
+
+                        <div class="product-price">
+                            $39.99
+                        </div>
+
+                        <a href="#" class="buy-button">
+                            Add to Cart
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     FEATURES
+                ================================== -->
+
+                <section class="product-features">
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            💧
+                        </div>
+
+                        <h3>
+                            Smart Hydration
+                        </h3>
+
+                        <p>
+                            Track your water intake
+                            throughout the day.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📱
+                        </div>
+
+                        <h3>
+                            Connected App
+                        </h3>
+
+                        <p>
+                            View your hydration
+                            information on your phone.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            🥤
+                        </div>
+
+                        <h3>
+                            Stainless Steel
+                        </h3>
+
+                        <p>
+                            Durable construction made
+                            for everyday use.
+                        </p>
+
+                    </div>
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            🎒
+                        </div>
+
+                        <h3>
+                            On-the-Go
+                        </h3>
+
+                        <p>
+                            Designed for school, work,
+                            exercise, and everyday life.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     DETAILS
+                ================================== -->
+
+                <section class="product-details">
+
+
+                    <div class="details-card">
+
+                        <h2>
+                            Designed for Real Life
+                        </h2>
+
+                        <p>
+
+                            Whether you're going to class,
+                            working out, heading to work, or
+                            spending time outdoors, SmartSip
+                            is designed to fit into your daily
+                            routine.
+
+                        </p>
+
+
+                        <ul class="details-list">
+
+                            <li>
+                                Smart water intake tracking
+                            </li>
+
+                            <li>
+                                Connected mobile app
+                            </li>
+
+                            <li>
+                                Durable stainless steel bottle
+                            </li>
+
+                            <li>
+                                Available in multiple sizes
+                            </li>
+
+                            <li>
+                                Easy to carry
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- Specifications -->
+
+                    <div class="details-card">
+
+                        <h2>
+                            Specifications
+                        </h2>
+
+                        <table class="spec-table">
+
+                            <tr>
+                                <td>Sizes</td>
+                                <td>20 oz / 32 oz / 40 oz</td>
+                            </tr>
+
+                            <tr>
+                                <td>Starting Price</td>
+                                <td>$39.99</td>
+                            </tr>
+
+                            <tr>
+                                <td>Material</td>
+                                <td>Stainless Steel</td>
+                            </tr>
+
+                            <tr>
+                                <td>Technology</td>
+                                <td>Built-in Water Tracking</td>
+                            </tr>
+
+                            <tr>
+                                <td>Mobile App</td>
+                                <td>Yes</td>
+                            </tr>
+
+                            <tr>
+                                <td>Target Users</td>
+                                <td>Active & Everyday Users</td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     CALL TO ACTION
+                ================================== -->
+
+                <section class="product-cta">
+
+                    <h2>
+                        Stay Hydrated. Stay Smart.
+                    </h2>
+
+                    <p>
+                        Make SmartSip part of your everyday routine.
+                    </p>
+
+                    <a href="#" class="buy-button">
+                        Get Your SmartSip
+                    </a>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+
+        <!-- =========================================
+             FOOTER
+        ========================================== -->
+
+        <footer>
+
+            <p>
+                © 2026 SmartSip | Kaden's Website
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <!-- NAVIGATION JAVASCRIPT -->
+
+    <script src="navigation.js"></script>
+
+</body>
+
+</html>
