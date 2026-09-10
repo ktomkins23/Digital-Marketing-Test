@@ -197,6 +197,46 @@
             margin-bottom: 20px;
         }
 
+        /* Size selector */
+        .size-selector {
+            margin-bottom: 20px;
+        }
+
+        .size-selector label {
+            display: block;
+            color: #142f52;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .size-option {
+            padding: 10px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background: white;
+            color: #475569;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .size-option:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .size-option.selected {
+            border-color: #2563eb;
+            background: #2563eb;
+            color: white;
+        }
 
         .buy-button {
 
@@ -217,6 +257,10 @@
             font-weight: bold;
 
             transition: 0.2s ease;
+
+            border: none;
+
+            cursor: pointer;
         }
 
 
@@ -229,6 +273,191 @@
             box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
         }
 
+        /* ============================================
+           SHOPPING CART
+        ============================================ */
+
+        .shopping-cart {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+            margin-top: 35px;
+            border-left: 4px solid #10b981;
+        }
+
+        .shopping-cart h2 {
+            color: #142f52;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cart-badge {
+            background: #10b981;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .cart-empty {
+            color: #64748b;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 16px;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            color: #142f52;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-size {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: #2563eb;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 20px;
+        }
+
+        .qty-btn {
+            background: #e2e8f0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #475569;
+            transition: 0.2s ease;
+        }
+
+        .qty-btn:hover {
+            background: #cbd5e1;
+        }
+
+        .qty-display {
+            min-width: 30px;
+            text-align: center;
+            font-weight: 600;
+            color: #142f52;
+        }
+
+        .remove-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .remove-btn:hover {
+            background: #dc2626;
+        }
+
+        .cart-summary {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .cart-summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #475569;
+            font-size: 16px;
+        }
+
+        .cart-summary-row.total {
+            font-size: 20px;
+            font-weight: bold;
+            color: #142f52;
+            margin-top: 15px;
+        }
+
+        .cart-summary-row.total .amount {
+            color: #10b981;
+            font-size: 24px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: #10b981;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.2s ease;
+        }
+
+        .checkout-btn:hover {
+            background: #059669;
+        }
+
+        .clear-cart-btn {
+            background: #94a3b8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s ease;
+            font-size: 14px;
+        }
+
+        .clear-cart-btn:hover {
+            background: #64748b;
+        }
 
         /* ============================================
            FEATURES
@@ -501,6 +730,21 @@
                 font-size: 32px;
             }
 
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cart-item-quantity {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .remove-btn {
+                width: 100%;
+                margin-top: 10px;
+            }
+
         }
 
 
@@ -521,6 +765,15 @@
 
             .product-cta h2 {
                 font-size: 24px;
+            }
+
+            .size-options {
+                flex-direction: column;
+            }
+
+            .size-option {
+                width: 100%;
+                text-align: center;
             }
 
         }
@@ -625,14 +878,43 @@
 
                         </p>
 
-                        <div class="product-price">
+                        <div class="product-price" id="product-price">
                             $39.99
                         </div>
 
-                        <a href="#" class="buy-button">
-                            Add to Cart
-                        </a>
+                        <!-- Size Selector -->
+                        <div class="size-selector">
+                            <label>Select Size:</label>
+                            <div class="size-options">
+                                <button class="size-option selected" data-size="20 oz" data-price="29.99">20 oz</button>
+                                <button class="size-option" data-size="32 oz" data-price="39.99">32 oz</button>
+                                <button class="size-option" data-size="40 oz" data-price="49.99">40 oz</button>
+                            </div>
+                        </div>
 
+                        <button class="buy-button" id="add-to-cart-btn">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================
+                     SHOPPING CART
+                ================================== -->
+
+                <section class="shopping-cart">
+                    <h2>
+                        🛒 Your Cart
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </h2>
+
+                    <div id="cart-container">
+                        <div class="cart-empty">
+                            Your cart is empty. Add items to get started!
+                        </div>
                     </div>
 
                 </section>
@@ -787,7 +1069,7 @@
 
                             <tr>
                                 <td>Starting Price</td>
-                                <td>$39.99</td>
+                                <td>$29.99</td>
                             </tr>
 
                             <tr>
@@ -862,6 +1144,163 @@
     <!-- NAVIGATION JAVASCRIPT -->
 
     <script src="navigation.js"></script>
+
+    <!-- SHOPPING CART JAVASCRIPT -->
+    <script>
+        // Cart data
+        let cart = [];
+
+        // Price options
+        const priceMap = {
+            '20 oz': 29.99,
+            '32 oz': 39.99,
+            '40 oz': 49.99
+        };
+
+        // DOM Elements
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+        const cartContainer = document.getElementById('cart-container');
+        const cartCount = document.getElementById('cart-count');
+        const productPriceDisplay = document.getElementById('product-price');
+        const sizeButtons = document.querySelectorAll('.size-option');
+
+        let selectedSize = '20 oz';
+        let selectedPrice = 29.99;
+
+        // Size selection
+        sizeButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove selected from all buttons
+                sizeButtons.forEach(b => b.classList.remove('selected'));
+                // Add selected to clicked button
+                this.classList.add('selected');
+                selectedSize = this.dataset.size;
+                selectedPrice = parseFloat(this.dataset.price);
+                productPriceDisplay.textContent = `$${selectedPrice.toFixed(2)}`;
+            });
+        });
+
+        // Add to cart
+        addToCartBtn.addEventListener('click', function() {
+            const existingItem = cart.find(item => item.size === selectedSize);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: Date.now(),
+                    name: 'SmartSip Water Bottle',
+                    size: selectedSize,
+                    price: selectedPrice,
+                    quantity: 1
+                });
+            }
+
+            updateCart();
+            // Visual feedback
+            addToCartBtn.textContent = '✓ Added!';
+            setTimeout(() => {
+                addToCartBtn.textContent = 'Add to Cart';
+            }, 1000);
+        });
+
+        // Update cart display
+        function updateCart() {
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<div class="cart-empty">Your cart is empty. Add items to get started!</div>';
+                return;
+            }
+
+            let cartHTML = '<div class="cart-items">';
+
+            cart.forEach(item => {
+                const itemTotal = (item.price * item.quantity).toFixed(2);
+                cartHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-size">Size: ${item.size}</div>
+                            <div class="cart-item-price">$${item.price.toFixed(2)} each</div>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <button class="qty-btn" onclick="decreaseQuantity(${item.id})">−</button>
+                            <span class="qty-display">${item.quantity}</span>
+                            <button class="qty-btn" onclick="increaseQuantity(${item.id})">+</button>
+                        </div>
+                        <div style="text-align: right; margin-right: 10px; min-width: 80px;">
+                            <div style="color: #10b981; font-weight: bold; font-size: 16px;">$${itemTotal}</div>
+                        </div>
+                        <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
+                    </div>
+                `;
+            });
+
+            cartHTML += '</div>';
+
+            // Calculate totals
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+
+            cartHTML += `
+                <div class="cart-summary">
+                    <div class="cart-summary-row">
+                        <span>Subtotal:</span>
+                        <span>$${subtotal.toFixed(2)}</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Tax (8%):</span>
+                        <span>$${tax.toFixed(2)}</span>
+                    </div>
+                    <div class="cart-summary-row total">
+                        <span>Total:</span>
+                        <span class="amount">$${total.toFixed(2)}</span>
+                    </div>
+                    <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+                    <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+                </div>
+            `;
+
+            cartContainer.innerHTML = cartHTML;
+        }
+
+        // Quantity functions
+        function increaseQuantity(id) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantity += 1;
+                updateCart();
+            }
+        }
+
+        function decreaseQuantity(id) {
+            const item = cart.find(item => item.id === id);
+            if (item && item.quantity > 1) {
+                item.quantity -= 1;
+                updateCart();
+            }
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCart();
+        }
+
+        function clearCart() {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                cart = [];
+                updateCart();
+            }
+        }
+
+        function checkout() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = total * 0.08;
+            alert(`Thank you for your purchase!\n\nOrder Total: $${(total + tax).toFixed(2)}\n\nThis is a demo. Checkout functionality would be integrated here.`);
+        }
+    </script>
 
 </body>
 
